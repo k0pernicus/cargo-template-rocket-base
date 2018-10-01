@@ -5,10 +5,9 @@ extern crate rocket;
 
 #[get("/")]
 fn index() -> &'static str {
-    "Hello, world from Rocket-Template!"
+    "Hello world, from the rocket-base template! :)"
 }
 
 fn main() {
-    println!("ROCKET TEMPLATE LAUNCHED! 🚀");
     rocket::ignite().mount("/", routes![index]).launch();
 }
